@@ -1,18 +1,17 @@
-// ===== MENU MOBILE =====
 const toggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
 const overlay = document.getElementById("overlay");
 
 toggle.addEventListener("click", () => {
   toggle.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
   overlay.classList.toggle("active");
 });
 
-// Fecha o overlay ao clicar em um link
-document.querySelectorAll(".overlay-menu a").forEach((link) => {
-  link.addEventListener("click", () => {
-    toggle.classList.remove("active");
-    overlay.classList.remove("active");
-  });
+overlay.addEventListener("click", () => {
+  toggle.classList.remove("active");
+  mobileMenu.classList.remove("active");
+  overlay.classList.remove("active");
 });
 
 // ✨ Efeito suave de entrada do texto
