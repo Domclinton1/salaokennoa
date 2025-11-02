@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <!-- Charset e Viewport -->
     <meta charset="UTF-8" />
@@ -73,8 +73,12 @@
       <!-- Menu desktop -->
       <nav class="nav-links">
         <a href="#" id="home">Home</a>
-        <a href="./pages/alisamento2d.html" id="alisamento2d">Alisamento 2D</a>
-        <a href="./pages/alisamento3d.html" id="alisamento3d">Alisamento 3D</a>
+        <a href="./pages/alisamento2d.html" id="alisamento2d"
+          >Alisamento Moreno 3D</a
+        >
+        <a href="./pages/alisamento3d.html" id="alisamento3d"
+          >Alisamento Loiro 3D</a
+        >
         <a href="./pages/promo.html" id="promocao">Promoção</a>
       </nav>
       <!-- Botão mobile -->
@@ -99,11 +103,17 @@
           Seu navegador não suporta vídeo de fundo.
         </video>
 
-        <div class="overlay"></div>
+        <div class="overlay overlay-hero"></div>
 
         <div class="hero-content fade-in">
-          <h1>Beleza e Sofisticação no Toque Kennoa Beauty</h1>
-          <p>Transforme seu visual com o nosso alisamento 3D exclusivo</p>
+          <h1>
+            <span>Kennoa Beauty:</span> onde seu cabelo reflete sua melhor
+            versão
+          </h1>
+          <p>
+            Transforme seu visual com o poder do alisamento 3D
+            <span>Kennoa Beauty</span>
+          </p>
           <a
             href="https://wa.me/553199935611?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
             class="btn-whatsapp"
@@ -123,19 +133,19 @@
               />
             </div>
             <div class="about-text">
-              <h2>Sobre o Kennoa Beauty</h2>
+              <h2>Sobre a Kennoa Beauty</h2>
               <p>
-                O <strong>Kennoa Beauty</strong> é um espaço dedicado à beleza,
-                ao cuidado e à autoestima. Localizado em um ambiente acolhedor e
-                sofisticado, nosso salão oferece tratamentos capilares de alta
-                performance, com destaque para o
-                <strong>Alisamento 3D</strong> — uma técnica exclusiva que
-                proporciona fios alinhados, brilhosos e saudáveis.
+                Na Kennoa Beauty, cada detalhe é pensado para valorizar o que há
+                de mais bonito em você. Em um ambiente acolhedor e sofisticado,
+                oferecemos experiências de beleza e cuidado que transformam, com
+                destaque para o Alisamento 3D, uma técnica exclusiva que garante
+                fios alinhados, brilhosos e saudáveis.
               </p>
               <p>
-                Nossa missão é realçar a beleza de cada cliente, com atendimento
-                personalizado e produtos de alta qualidade. Acreditamos que cada
-                mulher merece se sentir confiante e radiante, todos os dias.
+                Nossa missão é realçar a beleza única de cada mulher, com
+                atendimento personalizado, produtos de alta qualidade e muito
+                carinho em cada toque. Porque acreditamos que toda mulher merece
+                sentir-se confiante, linda e radiante todos os dias.
               </p>
               <a
                 href="https://wa.me/553199935611?text=Olá,%20gostaria%20de%20agendar%20um%20horário
@@ -151,30 +161,29 @@
       <section class="sobre" id="sobre">
         <div class="sobre-container">
           <div class="sobre-texto">
-            <h2>Sobre a Kennoa Beauty Institute</h2>
+            <h2>Somos Especialistas em Cuidados com a Mulher</h2>
             <p>
-              A Kennoa Beauty é referência em cuidados capilares e
-              transformações que valorizam a beleza única de cada mulher. Nossa
-              missão é proporcionar uma experiência exclusiva, com técnicas
-              avançadas e produtos profissionais de alta performance.
+              Na Kennoa Beauty, cada detalhe é pensado para valorizar a beleza e
+              a confiança da mulher moderna. Somos referência em cuidados
+              capilares e transformações personalizadas, que realçam o que há de
+              mais bonito em você, combinando técnicas avançadas, produtos de
+              alta performance e um atendimento que une carinho,
+              profissionalismo e resultados reais.
             </p>
 
-            <p>
-              Somos especialistas em
-              <strong
-                >alisamento inteligente, loiro 3D, morena iluminada e
-                tratamentos de reconstrução capilar</strong
-              >. Aqui, cada cliente recebe um atendimento personalizado,
-              diagnóstico preciso e resultados surpreendentes — sem danos e com
-              brilho duradouro.
-            </p>
-
+            <p><strong>Somos especialistas em:</strong></p>
+            <ul class="diferenciais">
+              <li>Alisamento Inteligente</li>
+              <li>Loiro 3D e Morena Iluminada</li>
+              <li>Tratamentos de Reconstrução Capilar</li>
+            </ul>
+            <p><strong>Nossos diferenciais:</strong></p>
             <ul class="diferenciais">
               <li>✨ Técnicas exclusivas e seguras</li>
               <li>👩‍🔬 Profissionais altamente qualificados</li>
-              <li>💆‍♀️ Experiência de atendimento premium</li>
-              <li>🌸 Ambiente confortável e instagramável</li>
-              <li>⭐ Resultados reais e aprovação das clientes</li>
+              <li>💆‍♀️ Atendimento premium e diagnóstico personalizado</li>
+              <li>🌸 Ambiente acolhedor e instagramável</li>
+              <li>⭐ Resultados duradouros e aprovação das clientes</li>
             </ul>
 
             <a
@@ -205,6 +214,32 @@
           <button class="carousel-btn left" id="prevBtn">&#10094;</button>
 
           <div class="carousel-track">
+            <div class="service-card promo-highlight-card">
+              <span class="promo-badge">🔥 Promoção Especial</span>
+
+              <img
+                src="./assets/images/WhatsApp Image 2025-11-02 at 13.43.24.jpeg"
+                alt="Promoção Alisamento 3D"
+              />
+
+              <div class="service-info">
+                <h3>Alisamento 3D Premium</h3>
+
+                <p>
+                  De <span class="price-old">R$299,00</span> por
+                  <span class="price-new promo-price">R$149,99</span>
+                </p>
+
+                <p class="promo-limited">✨ Vagas Limitadas • Somente Hoje!</p>
+
+                <a
+                  href="https://wa.me/5531999935611?text=Quero%20garantir%20a%20promoção%20de%20alisamento%203D!"
+                  class="btn promo-btn"
+                  >Garantir Promoção 💖</a
+                >
+              </div>
+            </div>
+
             <!-- Serviço 1 -->
             <div class="service-card">
               <img
@@ -241,27 +276,6 @@
                   href="https://wa.me/5531999935611?text=Quero%20meu%20Alisamento%20Moreno%203D!"
                   class="btn"
                   >Agendar</a
-                >
-              </div>
-            </div>
-
-            <!-- Serviço 3 -->
-            <div class="service-card">
-              <img
-                src="./assets/images/WhatsApp Image 2025-11-02 at 13.43.24.jpeg"
-                alt="Promoção Alisamento 3D"
-              />
-              <div class="service-info">
-                <h3>Promoção Alisamento 3D</h3>
-                <p>
-                  De <span class="price-old">R$299,00</span> por
-                  <span class="price-new">R$149,99</span>. Garanta já o seu
-                  horário promocional!
-                </p>
-                <a
-                  href="https://wa.me/5531999935611?text=Quero%20garantir%20a%20promoção%20de%20alisamento%203D!"
-                  class="btn"
-                  >Aproveitar</a
                 >
               </div>
             </div>
