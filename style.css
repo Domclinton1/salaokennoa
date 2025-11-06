@@ -24,7 +24,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px 5%;
+  padding: 0 3%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -301,8 +301,20 @@ body {
 }
 /* SOBRE O SALÃO */
 .about {
+  position: relative;
   padding: 100px 5%;
-  background-color: #fff8f9;
+  background: url(./assets/images/salao-kennoa.jpeg) no-repeat center/cover;
+  color: #fff;
+  z-index: 1;
+  background-attachment: fixed;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* sombra escura */
+  z-index: -1; /* fica atrás do texto */
 }
 
 .about-content {
@@ -330,14 +342,14 @@ body {
 .about-text h2 {
   font-family: "Playfair Display", serif;
   font-size: 2.5rem;
-  color: #b57b8a;
+  color: #eec9d3;
   margin-bottom: 20px;
 }
 
 .about-text p {
   font-family: "Poppins", sans-serif;
   font-size: 1.05rem;
-  color: #4d4d4d;
+  color: var(--background-1);
   line-height: 1.8;
   margin-bottom: 15px;
 }
