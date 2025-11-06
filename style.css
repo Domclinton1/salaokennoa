@@ -264,13 +264,14 @@ body {
 .btn-whatsapp {
   background-color: #c97b84;
   color: #fff;
-  padding: 14px 32px;
+  padding: 10px;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1.1rem;
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  max-width: fit-content;
 }
 
 .btn-whatsapp:hover {
