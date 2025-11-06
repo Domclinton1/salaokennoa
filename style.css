@@ -303,7 +303,7 @@ body {
 .about {
   position: relative;
   padding: 100px 5%;
-  background: url(./assets/images/salao-kennoa.jpeg) no-repeat center/cover;
+  background: url(./assets/images/salao-kennoa.webp) no-repeat center/cover;
   color: #fff;
   z-index: 1;
   background-attachment: fixed;
@@ -382,8 +382,11 @@ body {
   }
 }
 .sobre {
-  padding: 100px 10%;
-  background: #fff7f9;
+  padding: 20px 5%;
+  background: linear-gradient(
+    rgba(192, 107, 136, 0.55),
+    rgba(255, 218, 230, 0.3)
+  );
 }
 
 .sobre-container {
@@ -402,7 +405,7 @@ body {
 .sobre h2 {
   font-family: "Playfair Display", serif;
   font-size: 2.4rem;
-  color: #c06b88;
+  color: #d14976;
   margin-bottom: 20px;
 }
 
@@ -666,7 +669,11 @@ body {
 }
 .galeria {
   padding: 80px 10%;
-  background: #fff;
+  background: linear-gradient(
+    rgba(192, 107, 136, 0.55),
+    rgba(255, 218, 230, 0.3)
+  );
+
   text-align: center;
 }
 
@@ -680,7 +687,7 @@ body {
 .galeria .subtitulo {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  color: #555;
+  color: #fff;
   margin-bottom: 35px;
 }
 
