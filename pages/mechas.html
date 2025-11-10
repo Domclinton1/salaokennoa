@@ -6,12 +6,133 @@
     <title>Salão Kennoa</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../styles/promocao.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/icons/logo.png"
+      type="image/x-icon"
+    />
     <style>
       body {
         background: linear-gradient(
           rgba(192, 107, 136, 0.55),
           rgba(255, 218, 230, 0.3)
         );
+      }
+
+      .mechas {
+        background: linear-gradient(
+          rgba(192, 107, 136, 0.55),
+          rgba(255, 218, 230, 0.3)
+        );
+        color: #3e3e3e;
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+      }
+
+      /* Hero */
+      .hero {
+        padding-top: 120px;
+        padding-bottom: 40px;
+      }
+
+      .mechas-content {
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .mechas-content h1 {
+        font-size: 2.5rem;
+        color: #5e2a3e;
+        margin-bottom: 1.5rem;
+      }
+
+      .mechas-content p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #4a4a4a;
+        margin-bottom: 2rem;
+      }
+
+      .btn-agendar {
+        background-color: #c06b88;
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .btn-agendar:hover {
+        background-color: #e89cb8;
+        transform: scale(1.05);
+      }
+
+      /* Tipos */
+      .mechas-info {
+        text-align: center;
+        padding: 4rem 1rem;
+      }
+
+      .mechas-info h2 {
+        color: #5e2a3e;
+        margin-bottom: 2rem;
+      }
+
+      .mechas-tipos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+
+      .tipo {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+        padding: 2rem;
+        width: 280px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+      }
+
+      .tipo:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Galeria */
+      .mechas-galeria {
+        text-align: center;
+        padding: 4rem 1rem;
+      }
+
+      .carrossel {
+        display: flex;
+        gap: 1.5rem;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding: 1rem;
+      }
+
+      .carrossel::-webkit-scrollbar {
+        display: none;
+      }
+
+      .carrossel-item {
+        min-width: 250px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .carrossel-item img {
+        width: 100%;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .carrossel-item img:hover {
+        transform: scale(1.05);
       }
     </style>
   </head>
@@ -58,54 +179,68 @@
 
         <div class="hero-content fade-in">
           <h1>
-            <span>PROMOÇÃO PREMIUM</span> <br />
-            Alisamento 3D por R$149
+            <span>Ilumine Seu Visual</span> <br />
+            com Nossas Mechas Exclusivas
           </h1>
           <p>
-            <span>Kennoa Beauty</span>
+            No <span>Kennoa Beauty Institute</span>, cada mecha é feita com
+            técnica, cuidado e personalização. Trabalhamos com os melhores
+            produtos para preservar a saúde dos fios enquanto realçamos sua
+            beleza natural.
           </p>
           <a
             href="https://wa.me/553199935611?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
-            class="btn-whatsapp"
+            class="btn-sobre"
           >
-            Quero essa promoção
+            💬 Agendar seu horário
           </a>
         </div>
       </section>
-      <section class="promo-benefits">
-        <h3>🌸 Por que escolher o Alisamento 3D Kennoa?</h3>
-        <div class="benefits-grid">
-          <div class="benefit">
-            <img
-              src="../assets/icons/hair-care.png"
-              alt="Cabelo liso e sedoso"
-            />
-            <p>Fios perfeitamente lisos e com brilho intenso</p>
-          </div>
-          <div class="benefit">
-            <img src="../assets/icons/flower.png" alt="Sem agredir o cabelo" />
-            <p>Tratamento que alisa e hidrata sem agredir os fios</p>
-          </div>
-          <div class="benefit">
-            <img src="../assets/icons/clock.png" alt="Longa duração" />
-            <p>Efeito duradouro e resistente à umidade</p>
-          </div>
-          <div class="benefit">
-            <img
-              src="../assets/icons/woman.png"
-              alt="Atendimento personalizado"
-            />
-            <p>Atendimento personalizado para realçar sua beleza</p>
+      <section class="mechas" id="mechas">
+        <div class="mechas-info">
+          <h2>✨ Tipos de Mechas que Trabalhamos</h2>
+          <div class="mechas-tipos">
+            <div class="tipo">
+              <h3>Balayage</h3>
+              <p>
+                Iluminação natural e suave, perfeita para quem busca um visual
+                moderno e sofisticado.
+              </p>
+            </div>
+            <div class="tipo">
+              <h3>Morena Iluminada</h3>
+              <p>
+                Ideal para realçar a beleza dos cabelos escuros com reflexos
+                dourados ou acobreados.
+              </p>
+            </div>
+            <div class="tipo">
+              <h3>Loiro Platinado</h3>
+              <p>
+                O visual mais desejado — fios claros, frios e luminosos com
+                acabamento profissional.
+              </p>
+            </div>
           </div>
         </div>
-      </section>
-      <section class="promo-cta">
-        <h2>Garanta já seu horário com 50% de desconto!</h2>
-        <a
-          href="https://wa.me/5531999935611?text=Quero garantir meu horário da promoção Kennoa!"
-          class="promo-btn-large"
-          >Reservar Agora</a
-        >
+
+        <div class="mechas-galeria">
+          <h2>Antes & Depois</h2>
+          <div class="carrossel">
+            <div class="carrossel-item">
+              <img src="../assets/mechas1.jpg" alt="Antes e depois 1" />
+            </div>
+            <div class="carrossel-item">
+              <img src="../assets/mechas2.jpg" alt="Antes e depois 2" />
+            </div>
+            <div class="carrossel-item">
+              <img src="../assets/mechas3.jpg" alt="Antes e depois 3" />
+            </div>
+            <div class="carrossel-item">
+              <img src="../assets/mechas4.jpg" alt="Antes e depois 4" />
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
