@@ -952,3 +952,70 @@ footer a img {
   color: #fff5f8;
   font-weight: 700;
 }
+
+.gallery-slider {
+  position: relative;
+  overflow: hidden;
+}
+.gallery-track {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.gallery-item {
+  flex: 0 0 auto;
+  margin-right: 16px;
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease; /* suavidade no zoom */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.2); /* aumenta só a imagem */
+}
+
+.gallery-item {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.gallery-item.active {
+  transform: scale(1.15);
+  z-index: 2;
+}
+
+.gallery-item:not(.active) {
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #b52755;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 15px;
+  z-index: 1;
+}
+.scroll-btn.left {
+  left: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.scroll-btn.right {
+  right: 0;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}

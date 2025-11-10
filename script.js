@@ -82,3 +82,59 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+const galleryTrack = document.getElementById("galleryTrack");
+const galleryItems = document.querySelectorAll(".gallery-item");
+let currentIndex = 0;
+
+function centerImage(index) {
+  const item = galleryItems[index];
+  if (!item) return;
+
+  const itemLeft = item.offsetLeft;
+  const itemWidth = item.offsetWidth;
+  const trackWidth = galleryTrack.offsetWidth;
+
+  const scrollTo = itemLeft - trackWidth / 2 + itemWidth / 2;
+  galleryTrack.scrollTo({ left: scrollTo, behavior: "smooth" });
+
+  // Atualiza destaque visual
+  galleryItems.forEach((i) => i.classList.remove("active"));
+  item.classList.add("active");
+}
+
+function scrollGallery(direction) {
+  currentIndex += direction;
+
+  if (currentIndex < 0) currentIndex = 0;
+  if (currentIndex >= galleryItems.length)
+    currentIndex = galleryItems.length - 1;
+
+  centerImage(currentIndex);
+}
+
+window.addEventListener("load", () => {
+  centerImage(currentIndex);
+});
+
+galleryTrack.addEventListener("scroll", () => {
+  // Debounce visual highlight (sem scroll automático)
+  window.requestAnimationFrame(() => {
+    let center = galleryTrack.scrollLeft + galleryTrack.offsetWidth / 2;
+    let closestItem = null;
+    let closestDistance = Infinity;
+
+    galleryItems.forEach((item, index) => {
+      const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+      const distance = Math.abs(center - itemCenter);
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestItem = item;
+        currentIndex = index;
+      }
+    });
+
+    galleryItems.forEach((i) => i.classList.remove("active"));
+    if (closestItem) closestItem.classList.add("active");
+  });
+});
