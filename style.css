@@ -908,13 +908,47 @@ footer {
   color: var(--background-1);
   text-align: center;
   padding: 20px;
+  gap: 0.7rem;
+  display: flex;
+  flex-direction: column;
 }
 
 footer a img {
   width: 32px;
 }
 
-footer img:hover {
+.redes-sociais {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.redes-sociais a {
+  padding: 10px;
+  width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.redes-sociais a img {
+  filter: invert(82%) sepia(15%) saturate(315%) hue-rotate(310deg);
+}
+.redes-sociais a:hover {
   background-color: var(--rosa-suave);
-  max-width: 32px;
+  max-width: 84px;
+  border-radius: 50%;
+}
+.redes-sociais a:hover img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%)
+    contrast(100%);
+}
+.credits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.credits a {
+  text-decoration: none;
+  color: #fff5f8;
+  font-weight: 700;
 }

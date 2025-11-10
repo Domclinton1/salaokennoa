@@ -1,0 +1,157 @@
+/* ===== PROMO PAGE ===== */
+.promo-page {
+  background: linear-gradient(
+    rgba(192, 107, 136, 0.55),
+    rgba(255, 218, 230, 0.3)
+  );
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.promo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+}
+
+.promo-logo img {
+  width: 120px;
+}
+
+.promo-btn-top {
+  background: #f38ba0;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.promo-btn-top:hover {
+  background: #ffb6c1;
+}
+
+/* HERO */
+.promo-hero {
+  text-align: center;
+  padding: 100px 10%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.promo-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.promo-content h2 {
+  font-size: 1.8rem;
+  color: #ffe4ec;
+  margin-bottom: 15px;
+}
+
+.promo-content h2 span {
+  color: #ffeb99;
+  font-weight: bold;
+}
+
+.promo-content p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.promo-btn-main {
+  background: #f38ba0;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.promo-btn-main:hover {
+  background: #ffb6c1;
+}
+
+/* BENEFITS */
+.promo-benefits {
+  text-align: center;
+  padding: 80px 10%;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 25px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s;
+}
+
+.benefit:hover {
+  transform: translateY(-5px);
+}
+
+.benefit img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+/* CTA SECTION */
+.promo-cta {
+  text-align: center;
+  padding: 100px 8%;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.promo-cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+.promo-btn-large {
+  background: #ffd700;
+  color: #8a2b4d;
+  padding: 16px 36px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.promo-btn-large:hover {
+  background: #ffe066;
+}
+
+/* FOOTER */
+.promo-footer {
+  text-align: center;
+  padding: 40px 5%;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+}
+
+.promo-footer a {
+  color: #ffd8e0;
+  text-decoration: none;
+}
+
+.promo-footer a:hover {
+  text-decoration: underline;
+}
