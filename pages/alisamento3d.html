@@ -11,6 +11,65 @@
       href="../assets/icons/logo.png"
       type="image/x-icon"
     />
+
+    <style>
+      .galeria {
+        width: 100%;
+        overflow: hidden;
+        background: linear-gradient(to bottom, #f9c9d8, #f6e4ec);
+        padding: 40px 0;
+      }
+
+      .slider {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .slides {
+        display: flex;
+        gap: 20px;
+        animation: scroll 30s linear infinite;
+        will-change: transform;
+      }
+
+      .slides img {
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 12px;
+        flex-shrink: 0;
+        user-select: none;
+        pointer-events: none;
+        opacity: 1; /* imagens totalmente visíveis */
+        transition: transform 0.3s ease;
+      }
+
+      .slides:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Tornar arrastável */
+      .slider {
+        cursor: grab;
+      }
+      .slider:active {
+        cursor: grabbing;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <!-- HEADER -->
@@ -63,11 +122,6 @@
             Quero meu cabelo perfeito ✨
           </a>
         </div>
-        <img
-          src="../assets/images/banner-3d.jpg"
-          class="hero-img"
-          alt="Alisamento 3D Kennoa"
-        />
       </section>
 
       <section class="options">
@@ -75,7 +129,7 @@
         <div class="cards">
           <div class="card">
             <img
-              src="../assets/images/loiro-3d.jpg"
+              src="../assets/images/alisamento-loiro-1.webp"
               alt="Alisamento 3D Loiro"
             />
             <h3>Alisamento 3D para Loiras 💛</h3>
@@ -86,14 +140,14 @@
             <a
               href="https://wa.me/5531999935611?text=Quero%20agendar%20meu%20Alisamento%203D!"
               target="_blank"
-              class="btn-secondary"
+              class="btn-sobre"
               >Ver detalhes</a
             >
           </div>
 
           <div class="card">
             <img
-              src="../assets/images/moreno-3d.jpg"
+              src="../assets/images/alisamento-moreno-2.webp"
               alt="Alisamento 3D Moreno"
             />
             <h3>Alisamento 3D para Morenas 🤎</h3>
@@ -103,7 +157,7 @@
             <a
               href="https://wa.me/5531999935611?text=Quero%20agendar%20meu%20Alisamento%203D!"
               target="_blank"
-              class="btn-secondary"
+              class="btn-sobre"
               >Ver detalhes</a
             >
           </div>
@@ -111,7 +165,7 @@
       </section>
 
       <section class="benefits">
-        <h2>Benefícios do Alisamento 3D ✨</h2>
+        <h2>Benefícios do Alisamento 3D</h2>
         <ul>
           <li>✅ Brilho tridimensional intenso</li>
           <li>✅ Durabilidade prolongada</li>
@@ -121,12 +175,76 @@
         </ul>
       </section>
 
-      <section class="before-after">
-        <h2>Antes e Depois</h2>
-        <div class="gallery">
-          <img src="../assets/images/result1.jpg" alt="" />
-          <img src="../assets/images/result2.jpg" alt="" />
-          <img src="../assets/images/result3.jpg" alt="" />
+      <section class="galeria" id="galeria">
+        <h2>Resultados</h2>
+
+        <div class="carousel" aria-roledescription="carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carouselTrack">
+              <!-- items (copie/cole suas .gallery-item) -->
+              <div class="gallery-item">
+                <img
+                  src="../assets/images/alisamento-kennoa.webp"
+                  alt="Resultado cabelo"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="../assets/images/alisamento-3d.webp"
+                  alt="Resultado cabelo"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="../assets/images/alisamento-3d-f.webp"
+                  alt="Resultado cabelo"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="../assets/images/alisamento-moreno-1.webp"
+                  alt="Resultado cabelo"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="../assets/images/alisamento-loiro-1.webp"
+                  alt="Resultado cabelo"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="../assets/images/alisamento-moreno-2.webp"
+                  alt="Resultado cabelo"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="../assets/images/alisamento-moreno-3.webp"
+                  alt="Resultado cabelo"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="../assets/images/alisamento-coroa-1.webp"
+                  alt="Resultado cabelo"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="../assets/images/alisamento-coroa.webp"
+                  alt="Resultado cabelo"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Dots de navegação (visível) -->
+          <div
+            class="carousel-dots"
+            id="carouselDots"
+            aria-hidden="false"
+          ></div>
         </div>
       </section>
 
@@ -165,6 +283,32 @@
         <p>&copy; Todos os direitos reservados.</p>
       </div>
     </footer>
+    <script>
+      const slider = document.querySelector(".slides");
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      slider.addEventListener("mousedown", (e) => {
+        isDown = true;
+        slider.classList.add("active");
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+      slider.addEventListener("mouseleave", () => {
+        isDown = false;
+      });
+      slider.addEventListener("mouseup", () => {
+        isDown = false;
+      });
+      slider.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2; // velocidade do arraste
+        slider.scrollLeft = scrollLeft - walk;
+      });
+    </script>
     <script src="../script.js"></script>
   </body>
 </html>
