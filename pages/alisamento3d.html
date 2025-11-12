@@ -15,8 +15,8 @@
     <style>
       @media screen and (max-width: 768px) {
         .hero h1 {
-          font-size: 1.65rem;
-          text-shadow: 1px 2px 1px #5e2a3e;
+          font-size: 2.5rem;
+          text-shadow: 1px 2px 1px #f9c9d8;
         }
         .hero p {
           font-size: 1rem;
@@ -25,14 +25,13 @@
           height: 100vh;
         }
         .mobile-menu a:last-child {
-          left: 0;
           right: 0;
         }
       }
       .galeria {
         width: 100%;
         overflow: hidden;
-        background: linear-gradient(to bottom, #f9c9d8, #f6e4ec);
+        background: linear-gradient(to bottom, #f9c9d8, #721740);
         padding: 40px 0;
       }
 
@@ -57,7 +56,7 @@
         flex-shrink: 0;
         user-select: none;
         pointer-events: none;
-        opacity: 1; /* imagens totalmente visíveis */
+        opacity: 10; /* imagens totalmente visíveis */
         transition: transform 0.3s ease;
       }
 
@@ -84,6 +83,34 @@
 
       ::-webkit-scrollbar {
         display: none;
+      }
+      .benefits {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(../assets/images/alisamento-moreno-2.webp);
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .benefits h2 {
+        font-size: 2.3rem;
+        text-shadow: 1px 1.5px 1px #f9c9d8;
+      }
+      .benefits ul {
+        color: #f6e4ec;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+      }
+      .benefits ul li {
+        font-size: 20px;
+      }
+      .cta-final h2 {
+        font-size: 2.3rem;
+        text-shadow: 1px 1.5px 1px #f9c9d8;
       }
     </style>
   </head>
@@ -132,7 +159,7 @@
             Brilho tridimensional, fios selados e resultado natural.
           </p>
           <a
-            href="https://wa.me/5531999935611?text=Olá,%20quero%20saber%20mais%20sobre%20o%20Alisamento%203D!"
+            href="https://wa.me/553199935611?text=Olá,%20vi%20os%20resultados%20do%20alisamento%203D%20e%20amei!%20Quero%20agendar%20um%20horário%20para%20fazer%20o%20meu.%20Você%20pode%20me%20informar%20as%20disponibilidades?"
             class="btn-sobre"
           >
             Quero meu cabelo perfeito ✨
@@ -267,10 +294,10 @@
       <section class="cta-final">
         <h2>Pronta para transformar seu cabelo?</h2>
         <a
-          href="https://wa.me/5531999935611?text=Quero%20agendar%20meu%20Alisamento%203D!"
-          class="btn-primary"
+          href="https://wa.me/553199935611?text=Olá,%20vi%20os%20resultados%20do%20alisamento%203D%20e%20amei!%20Quero%20agendar%20um%20horário%20para%20fazer%20o%20meu.%20Você%20pode%20me%20informar%20as%20disponibilidades?"
+          class="btn-sobre"
         >
-          Agendar agora 💖
+          Agendar agora
         </a>
       </section>
     </main>
@@ -287,7 +314,9 @@
             src="../assets/icons/facebook.svg"
             alt="Facebook de Salão Kennoa"
         /></a>
-        <a href="https://wa.me/553199935611">
+        <a
+          href="https://wa.me/553199935611?text=Olá,%20vi%20os%20resultados%20do%20alisamento%203D%20e%20amei!%20Quero%20agendar%20um%20horário%20para%20fazer%20o%20meu.%20Você%20pode%20me%20informar%20as%20disponibilidades?"
+        >
           <img
             src="../assets/icons/whatsapp.svg"
             alt="Whatsapp de Salão Kennoa"
