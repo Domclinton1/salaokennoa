@@ -82,7 +82,7 @@ h2 {
 .nav-links a:last-child,
 .mobile-menu a:last-child {
   display: flex;
-  left: 60px;
+
   padding: 14px 32px;
   background: linear-gradient(135deg, #d88baa, #c06b88);
   color: #fff;
@@ -207,8 +207,11 @@ h2 {
 @media (max-width: 900px) {
   .menu-toggle {
     display: flex;
+    align-items: left;
   }
-
+  .mobile-menu a:last-child {
+    left: 60px;
+  }
   .nav-links {
     display: none;
   }
