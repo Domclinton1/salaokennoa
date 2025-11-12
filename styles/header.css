@@ -188,9 +188,10 @@
     width: fit-content;
     height: auto;
     padding-bottom: 40px;
+    height: 100vh;
   }
   .mobile-menu a:last-child {
-    left: 60px;
+    left: 0;
   }
   .nav-links {
     display: none;
