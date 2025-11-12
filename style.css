@@ -19,6 +19,10 @@ body {
   background-color: var(--background-1);
   font-family: "Poppins", sans-serif;
 }
+h2 {
+  line-height: 1;
+  text-transform: uppercase;
+}
 /* ===== HEADER GERAL ===== */
 .header {
   position: fixed;
@@ -295,7 +299,7 @@ body {
 }
 
 .btn-whatsapp:hover {
-  background-color: #d4af37;
+  background-color: #b52755;
   transform: scale(1.05);
 }
 
@@ -388,7 +392,7 @@ body {
 }
 
 .about-btn:hover {
-  background-color: #d4af37;
+  background-color: #b52755;
   transform: translateY(-3px);
 }
 
@@ -649,7 +653,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #d4af37;
+  background-color: #b52755;
   color: #fff;
 }
 
@@ -670,7 +674,7 @@ body {
 }
 
 .carousel-btn:hover {
-  background-color: #d4af37;
+  background-color: #b52755;
 }
 
 .carousel-btn.left {
@@ -708,6 +712,7 @@ body {
   font-size: 2.4rem;
   color: #c06b88;
   margin-bottom: 10px;
+  line-height: 1;
 }
 
 .galeria .subtitulo {
@@ -768,6 +773,7 @@ body {
   font-size: 2.5rem;
   color: #c06b88;
   margin-bottom: 20px;
+  line-height: 1;
 }
 
 .info-localizacao p {
@@ -794,8 +800,8 @@ body {
 }
 
 .btn-localizacao:hover {
-  background: #e7b7c8;
-  color: #000;
+  background: #b52755;
+  color: #fff;
 }
 
 .mapa {
@@ -815,6 +821,7 @@ body {
 
   .info-localizacao h2 {
     text-align: center;
+    line-height: 1;
   }
 
   .info-localizacao p,
@@ -850,6 +857,7 @@ body {
   font-size: 2.5rem;
   color: #c97b84;
   margin-bottom: 10px;
+  line-height: 1;
 }
 
 .faq-container .subtitle {
