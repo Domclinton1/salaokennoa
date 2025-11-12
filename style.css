@@ -146,7 +146,7 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   align-items: left;
-  gap: 25px;
+  gap: 10px;
   transition: 0.4s;
   z-index: 1002;
   text-align: right;
@@ -208,6 +208,11 @@ h2 {
   .menu-toggle {
     display: flex;
     align-items: left;
+  }
+  .mobile-menu {
+    width: fit-content;
+    height: auto;
+    padding-bottom: 40px;
   }
   .mobile-menu a:last-child {
     left: 60px;
