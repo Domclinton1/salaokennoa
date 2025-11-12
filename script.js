@@ -14,6 +14,19 @@ overlay.addEventListener("click", () => {
   overlay.classList.remove("active");
 });
 
+// Carrossel automático
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showNextSlide() {
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add("active");
+}
+
+// Troca a cada 5 segundos
+setInterval(showNextSlide, 5000);
+
 // ✨ Efeito suave de entrada do texto
 window.addEventListener("DOMContentLoaded", () => {
   const content = document.querySelector(".fade-in");

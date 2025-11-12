@@ -170,11 +170,37 @@
     </header>
     <main>
       <section class="hero">
-        <video autoplay loop muted playsinline>
-          <source src="./assets/video/video-banner.mp4" type="video/mp4" />
-          Seu navegador não suporta vídeo de fundo.
-        </video>
+        <!-- Container do carrossel -->
+        <div class="hero-carousel">
+          <div class="slide active">
+            <video autoplay loop muted playsinline>
+              <source src="./assets/video/video-banner.mp4" type="video/mp4" />
+            </video>
+          </div>
 
+          <div class="slide">
+            <img
+              src="./assets/images/mechas1.jpg"
+              alt="Mechas loiras Kennoa Beauty"
+            />
+          </div>
+
+          <div class="slide">
+            <img
+              src="./assets/images/mechas2.jpg"
+              alt="Transformação Kennoa Beauty"
+            />
+          </div>
+
+          <div class="slide">
+            <img
+              src="./assets/images/mechas3.jpg"
+              alt="Resultado final das mechas"
+            />
+          </div>
+        </div>
+
+        <!-- Overlay e conteúdo existentes -->
         <div class="overlay overlay-hero"></div>
 
         <div class="hero-content fade-in">
@@ -196,6 +222,7 @@
           </a>
         </div>
       </section>
+
       <section class="mechas" id="mechas">
         <div class="mechas-info">
           <h2>✨ Tipos de Mechas que Trabalhamos</h2>
