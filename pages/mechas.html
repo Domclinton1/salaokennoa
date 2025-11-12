@@ -34,6 +34,21 @@
         padding-top: 120px;
         padding-bottom: 40px;
       }
+      @media screen and (max-width: 768px) {
+        .hero h1 {
+          font-size: 1.65rem;
+          text-shadow: 1px 2px 1px #5e2a3e;
+        }
+        .hero p {
+          font-size: 1rem;
+        }
+        .mobile-menu {
+          height: 100vh;
+        }
+        .mobile-menu a:last-child {
+          left: 0;
+        }
+      }
 
       .mechas-content {
         max-width: 800px;
@@ -74,7 +89,8 @@
       }
 
       .mechas-info h2 {
-        color: #5e2a3e;
+        color: #fff;
+        font-size: 1.8rem;
         margin-bottom: 2rem;
       }
 
@@ -103,7 +119,10 @@
         text-align: center;
         padding: 4rem 1rem;
       }
-
+      .mechas-galeria h2 {
+        color: #ff5e84;
+        font-size: 2rem;
+      }
       .carrossel {
         display: flex;
         gap: 1.5rem;
@@ -123,16 +142,25 @@
         border-radius: 15px;
         overflow: hidden;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        flex: 0 0 300px; /* largura fixa da div do slide */
+        height: 400px;
       }
 
       .carrossel-item img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
         display: block;
-        transition: 0.3s;
       }
 
       .carrossel-item img:hover {
         transform: scale(1.05);
+      }
+      .btn-sobre {
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        margin: 20px auto;
       }
     </style>
   </head>
@@ -169,36 +197,17 @@
       </nav>
     </header>
     <main>
-      <section class="hero">
+      <section
+        class="hero"
+        style="
+          background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url(../assets/images/mechas-5.webp);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        "
+      >
         <!-- Container do carrossel -->
-        <div class="hero-carousel">
-          <div class="slide active">
-            <video autoplay loop muted playsinline>
-              <source src="./assets/video/video-banner.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div class="slide">
-            <img
-              src="./assets/images/mechas1.jpg"
-              alt="Mechas loiras Kennoa Beauty"
-            />
-          </div>
-
-          <div class="slide">
-            <img
-              src="./assets/images/mechas2.jpg"
-              alt="Transformação Kennoa Beauty"
-            />
-          </div>
-
-          <div class="slide">
-            <img
-              src="./assets/images/mechas3.jpg"
-              alt="Resultado final das mechas"
-            />
-          </div>
-        </div>
 
         <!-- Overlay e conteúdo existentes -->
         <div class="overlay overlay-hero"></div>
@@ -215,7 +224,8 @@
             beleza natural.
           </p>
           <a
-            href="https://wa.me/553199935611?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
+            href="https://wa.me/553199935611?text=Olá,%20vi%20os%20resultados%20incríveis%20das%20mechas%20e%20quero%20agendar%20um%20horário!%20Você%20pode%20me%20passar%20as%20disponibilidades?"
+            target="_blank"
             class="btn-sobre"
           >
             Agendar seu horário
@@ -225,7 +235,7 @@
 
       <section class="mechas" id="mechas">
         <div class="mechas-info">
-          <h2>✨ Tipos de Mechas que Trabalhamos</h2>
+          <h2>Tipos de Mechas que Trabalhamos</h2>
           <div class="mechas-tipos">
             <div class="tipo">
               <h3>Balayage</h3>
@@ -281,6 +291,12 @@
             </div>
           </div>
         </div>
+        <a
+          href="https://wa.me/553199935611?text=Olá,%20vi%20os%20resultados%20incríveis%20das%20mechas%20e%20quero%20agendar%20um%20horário!%20Você%20pode%20me%20passar%20as%20disponibilidades?"
+          target="_blank"
+          class="btn-sobre"
+          >Quero agendar agora</a
+        >
       </section>
     </main>
     <footer>
@@ -296,7 +312,9 @@
             src="../assets/icons/facebook.svg"
             alt="Facebook de Salão Kennoa"
         /></a>
-        <a href="https://wa.me/553199935611">
+        <a
+          href="https://wa.me/553199935611?text=Olá,%20vi%20os%20resultados%20incríveis%20das%20mechas%20e%20quero%20agendar%20um%20horário!%20Você%20pode%20me%20passar%20as%20disponibilidades?1"
+        >
           <img
             src="../assets/icons/whatsapp.svg"
             alt="Whatsapp de Salão Kennoa"
