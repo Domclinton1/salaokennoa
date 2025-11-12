@@ -19,175 +19,6 @@ h3 {
   color: #b83f59;
   text-transform: uppercase;
 }
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 0 2%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(255, 248, 249, 0.9);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  border-bottom: 1px solid #f2e2e5;
-}
-
-.logo img {
-  width: 80px;
-  height: auto;
-}
-
-/* ===== MENU DESKTOP ===== */
-.nav-links {
-  display: flex;
-  gap: 40px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #b57b8a;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 1.05rem;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #d4af37;
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #d4af37;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-/* ===== MENU MOBILE (hambúrguer) ===== */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.menu-toggle span {
-  width: 28px;
-  height: 3px;
-  background-color: #b57b8a;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: 0.3s ease;
-  z-index: 1000;
-}
-
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-}
-
-/* Sidebar Menu */
-.mobile-menu {
-  position: fixed;
-  right: -250px;
-  top: 0;
-  width: 250px;
-  height: 100vh;
-  background-color: rgba(255, 248, 249, 0.9);
-  backdrop-filter: blur(10px);
-  padding: 120px 30px 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  transition: 0.4s;
-  z-index: 1002;
-  text-align: right;
-}
-
-.mobile-menu a {
-  text-decoration: none;
-  color: #b57b8a;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 1.05rem;
-  position: relative;
-  transition: color 0.3s ease;
-}
-.mobile-menu a::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #d4af37;
-  transition: width 0.3s ease;
-}
-
-.mobile-menu a:hover {
-  color: #d4af37;
-}
-
-.menu-mobile a:hover::after {
-  width: 100%;
-}
-
-/* Quando o menu abre */
-.mobile-menu.active {
-  right: 0;
-}
-
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Animação do X */
-.menu-toggle.active span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-/* Mostrar apenas no mobile */
-@media (max-width: 900px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  .nav-links {
-    display: none;
-  }
-}
 
 /* Hero */
 .hero video {
@@ -324,4 +155,97 @@ h3 {
     align-items: center;
     gap: 1rem;
   }
+}
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+    text-shadow: 1px 2px 1px #f9c9d8;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+.galeria {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #f9c9d8, #721740);
+  padding: 40px 0;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  gap: 20px;
+  animation: scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.slides img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  user-select: none;
+  pointer-events: none;
+  opacity: 10; /* imagens totalmente visíveis */
+  transition: transform 0.3s ease;
+}
+
+.slides:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Tornar arrastável */
+.slider {
+  cursor: grab;
+}
+.slider:active {
+  cursor: grabbing;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.benefits {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assets/images/alisamento-moreno-2.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.benefits h2 {
+  font-size: 2.3rem;
+  text-shadow: 1px 1.5px 1px #f9c9d8;
+}
+.benefits ul {
+  color: #f6e4ec;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+.benefits ul li {
+  font-size: 20px;
+}
+.cta-final h2 {
+  font-size: 2.3rem;
+  text-shadow: 1px 1.5px 1px #f9c9d8;
 }

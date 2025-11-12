@@ -1,11 +1,12 @@
 footer {
-  background-color: var(--rosa-queimado);
-  color: var(--background-1);
+  background: linear-gradient(to bottom, #f9c9d8, #721740);
+
   text-align: center;
   padding: 20px;
   gap: 0.7rem;
   display: flex;
   flex-direction: column;
+  color: #fff5f8;
 }
 
 footer a img {
@@ -26,7 +27,7 @@ footer a img {
   justify-content: center;
 }
 .redes-sociais a img {
-  filter: invert(82%) sepia(15%) saturate(315%) hue-rotate(310deg);
+  filter: invert(90%) sepia(15%) saturate(100%) hue-rotate(310deg);
 }
 .redes-sociais a:hover {
   background-color: var(--rosa-suave);
@@ -41,6 +42,9 @@ footer a img {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+.credits h3 {
+  color: #fff5f8;
 }
 .credits a {
   text-decoration: none;
