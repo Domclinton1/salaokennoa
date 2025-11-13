@@ -184,3 +184,47 @@ body {
 .promo-footer a:hover {
   text-decoration: underline;
 }
+
+h2 {
+  color: #5e2a3e;
+  text-shadow: 1px 2px 1px #db7ca0;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+  font-size: 2.7rem;
+}
+.promo-cta {
+  background: linear-gradient(to bottom, #f9c9d8, #721740);
+}
+.promo-cta h2 {
+  font-size: 2.7rem;
+}
+#cta-text {
+  font-size: 1.5rem;
+}
+.btn-sobre {
+  width: fit-content;
+  margin: 20px auto;
+  text-transform: uppercase;
+}
+.hero-content {
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .promo-cta {
+    padding: 15px;
+  }
+  .promo-benefits {
+    padding: 15px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  #cta-text {
+    font-size: 1.3rem;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+}
